@@ -1,0 +1,26 @@
+{
+  "name": "Create Waterfall from Splunk",
+  "description": "Create Waterfall from Splunk, using AILTN logline",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://splunk-web.crz.salesforce.com/en-US/app/search/search*"],
+      "all_frames": true,
+      "run_at": "document_end",
+      "js": ["contentScript.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Waterfall for Splunk",
+    "default_icon": "waterfall.png"
+  },
+  "manifest_version": 2,
+  "icons": { "16": "waterfall.png",
+    "48": "waterfall.png",
+   "128": "waterfall.png" }
+}
