@@ -1,6 +1,6 @@
-const SERVER = 'http://localhost:3001'; // local debug
+//const SERVER = 'http://localhost:3002'; // local debug
 //const SERVER = 'https://logline.herokuapp.com';
-//const SERVER = 'https://lwc-logline.herokuapp.com';
+const SERVER = 'https://lwc-logline.herokuapp.com';
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", checkForAiltn);
