@@ -1,6 +1,6 @@
-//const SERVER = 'http://localhost:3002'; // local debug
+const SERVER = 'http://localhost:3002'; // local debug
 //const SERVER = 'https://logline.herokuapp.com';
-const SERVER = 'https://lwc-logline.herokuapp.com';
+//const SERVER = 'https://lwc-logline.herokuapp.com';
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", checkForAiltn);
@@ -28,7 +28,7 @@ function getHTMLToInsert(ailtn) {
   }
   const html = `<a 
                   onclick="event.stopPropagation();" 
-                  href="${SERVER}?type=ailtn:lightningPageView&payload=${btoa(ailtn)}" 
+                  href="${SERVER}?type=ailtn:lightningPageView&payload=${btoa(encodeURIComponent(ailtn))}" 
                   target="_blank"
                   style="margin-top: 20px; display: block" >
                     ${getSVG()}

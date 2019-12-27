@@ -9,7 +9,7 @@
   "permissions": ["activeTab"],
   "content_scripts": [
     {
-      "matches": ["https://splunk-web.crz.salesforce.com/en-US/app/search/search*"],
+      "matches": ["https://splunk-web.crz.salesforce.com/en-US/app/search/search*", "https://ice-splunksrch1-0-prd.eng.sfdc.net/*"],
       "all_frames": true,
       "run_at": "document_end",
       "js": ["contentScript.js"]
